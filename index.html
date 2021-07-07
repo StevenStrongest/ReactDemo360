@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>React360Demo</title>
+    <style>body { margin: 0; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./style/styleKey.css">
+  </head>
+  <body>
+    <!-- Attachment point for your app -->
+    <div id="container"></div>
+    <div class="moveKey">
+      <div class="key W-key">W</div>
+      <div class="layout">
+        <div class="key A-key">A</div>
+        <div class="key S-key">S</div>
+        <div class="key D-key">D</div>
+      </div>
+    </div>
+    <script src="./client.bundle?platform=vr"></script>
+    <script>
+      // Initialize the React 360 application
+      React360.init(
+        'index.bundle?platform=vr&dev=true',
+        document.getElementById('container'),
+        {
+          assetRoot: 'static_assets/',
+        }
+      );
+    </script>
+    <script src="./script/keyactive.js"></script>
+  </body>
+</html>
+
